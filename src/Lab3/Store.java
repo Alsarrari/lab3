@@ -13,15 +13,30 @@ public class Store {
     public void users(User user) {
         users.add(user);
     }
+    
+    public void displayUsers() {
+        for (User u : users) {
+            System.out.println( u.getUsername());
+        }
 
 
     public void mediaList(Media media) {
         mediaList.add(media);
     }
-//    public void setUsers(String users){
-//        this.users=users;
-//    }
+    
+    public void displayMedias() {
+        for (Media m : medias) {
+            System.out.println(m);
+        }
+    }
 
+    public Book searchBook(String title) {
+        for (Media m : medias) {
+            if (m instanceof Book && m.getTitle().equalsIgnoreCase(title))
+                return (Book) ;
+        }
+    
+    
 }
 
 
