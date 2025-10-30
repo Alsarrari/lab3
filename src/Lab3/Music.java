@@ -19,10 +19,29 @@ public class Music extends Media{
     public void setArtist(String artist) {
         this.artist = artist;
     }
+    
+    public void listen(User user) {
+        user.addPurchasedMedia(this);
+        System.out.println(user.getUsername() getTitle());
+    }
+
+    public void generatePlaylist(List<Music> musicCatalog) {
+        System.out.println( artist );
+        
+        for (Music m : musicCatalog) {
+            if (m.artist.equals(this.artist))
+                
+                System.out.println( m.getTitle());
+        }
 
 
     @Override
     public String toString() {
         return "Music" +artist ;
+    }
+        
+    @Override
+    public String toString() {
+        return super.toString() +  artist + getMediaType();
     }
 }
