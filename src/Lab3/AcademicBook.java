@@ -20,4 +20,15 @@ public class AcademicBook extends Book{
     public void setSubject(String subject) {
         this.subject = subject;
     }
+    
+    @Override
+    public String getMediaType() {
+        return getAverageRating() >= 4.5;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+ subject;
+    }
+}
 }
