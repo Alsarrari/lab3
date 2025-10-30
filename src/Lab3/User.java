@@ -24,4 +24,27 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
+    
+    public void addToCart(Media media) {
+        cart.add(media);
+        System.out.println(media.getTitle() +  username + "'s cart.");
+    }
+
+    public void removeFromCart(Media media) {
+        cart.remove( media);
+        System.out.println(media.getTitle() );
+    }
+
+    public void checkout() {
+        for (Media m : cart ) {
+            purchased.add (m );
+            
+  System.out.println(username + m.getTitle());
+        }
+        cart.clear();
+    }
+
+    public void addPurchasedMedia(Media media) {
+        purchased.add(media);
+    }
 }
