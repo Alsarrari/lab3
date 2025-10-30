@@ -4,6 +4,10 @@ package Lab3;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+        
+        User u1 = new User("abdulrhman", "ali@email.com");
+        store.addUser(u1);
+
         Media media=new Media();
         media.getMediaType();
         media.getAuteur();
