@@ -27,7 +27,7 @@ public class User {
     
     public void addToCart(Media media) {
         cart.add(media);
-        System.out.println(media.getTitle() +  username + "'s cart.");
+        System.out.println(media.getTitle() +  username );
     }
 
     public void removeFromCart(Media media) {
