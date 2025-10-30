@@ -21,4 +21,23 @@ public class Movie extends Media{
     public void setDuration(int duration) {
         this.duration = duration;
     }
+    
+    public void recommendSimilarMovies(List<Movie> movieCatalog) {
+        System.out.println( getAuteur());
+        
+        for (Movie m : movieCatalog) {
+            
+            if (m.getAuteur().equals(this.getAuteur()) && !m.equals(this))
+                System.out.println( m.getTitle());
+        }
+    }
+
+    @Override
+    public String getMediaType() {
+        return duration >= 120 ;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + duration +  getMediaType();
 }
